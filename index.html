@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Песик Джонні та його молодіжні бешкетники | PM.cinema</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="PM.cinema">
+      PM<span>.cinema</span>
+    </a>
+    <nav class="nav">
+      <a href="#watch">Дивитись</a>
+      <a href="#about">Опис</a>
+      <a href="#details">Деталі</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-backdrop" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <aside class="poster glass reveal">
+          <img src="reklama.jpg" alt="Постер фільму Песик Джонні та його молодіжні бешкетники">
+        </aside>
+
+        <div class="hero-copy reveal delay-1">
+          <span class="badge">Анімація • пригоди • комедія</span>
+          <h1>Песик Джонні та його молодіжні бешкетники</h1>
+          <p class="lead">
+            Джонні вривається у літо з друзями, скейтом, фарбами та планом, який
+            точно мав бути простим. Але коли навколо збирається команда юних
+            бешкетників, кожен день перетворюється на нову пригоду.
+          </p>
+
+          <div class="facts">
+            <span>2026</span>
+            <span>Україна</span>
+            <span>6+</span>
+            <span>Очікується</span>
+          </div>
+
+          <a class="primary-btn" href="#watch">
+            <span class="play-icon"></span>
+            Перейти до плеєра
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="watch-section" id="watch">
+      <div class="section-head reveal">
+        <span class="badge">Онлайн перегляд</span>
+        <h2>Плеєр</h2>
+      </div>
+
+      <div class="player-shell glass reveal delay-1">
+        <div class="player-screen">
+          <button class="player-start" type="button" id="playerBtn" aria-label="Запустити плеєр">
+            <span class="player-play"></span>
+          </button>
+          <div class="player-empty">
+            <strong>Відео ще не підключено</strong>
+            <span>Після додавання джерела фільм відкриватиметься у цьому плеєрі.</span>
+          </div>
+        </div>
+        <div class="player-bar">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-grid" id="about">
+      <article class="description glass reveal">
+        <span class="badge">Про фільм</span>
+        <h2>Опис</h2>
+        <p>
+          Джонні не створений для нудних канікул. Він бачить пригоду там, де інші
+          бачать звичайний день, і легко збирає навколо себе друзів, готових на
+          найсміливіші витівки. Разом вони запускають ланцюг подій, у якому буде
+          багато сміху, хаосу, несподіваних рішень і справжньої командної підтримки.
+        </p>
+        <p>
+          Це яскрава сімейна історія про дружбу, характер і той момент, коли навіть
+          маленький песик може стати центром великої пригоди.
+        </p>
+      </article>
+
+      <aside class="info-panel glass reveal delay-1" id="details">
+        <h3>Інформація</h3>
+        <dl>
+          <div><dt>Оригінальна назва</dt><dd>Песик Джонні та його молодіжні бешкетники</dd></div>
+          <div><dt>Жанр</dt><dd>анімація, пригоди, комедія</dd></div>
+          <div><dt>Рік</dt><dd>2026</dd></div>
+          <div><dt>Країна</dt><dd>Україна</dd></div>
+          <div><dt>Мова</dt><dd>українська</dd></div>
+          <div><dt>Статус</dt><dd>очікується реліз</dd></div>
+        </dl>
+      </aside>
+    </section>
+
+    <section class="mood-section">
+      <div class="section-head reveal">
+        <span class="badge">Настрій</span>
+        <h2>Що чекати</h2>
+      </div>
+      <div class="mood-grid">
+        <div class="mood-card glass reveal">Швидкий темп</div>
+        <div class="mood-card glass reveal delay-1">Дружба</div>
+        <div class="mood-card glass reveal delay-2">Веселий хаос</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>PM.cinema</span>
+    <span>Фільми, прем'єри та перегляд без зайвого шуму.</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
