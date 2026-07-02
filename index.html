@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Песик Джонні та його молодіжні бешкетники | PM.cinema</title>
+  <title>PM.cinema | Каталог фільмів</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;700;900&display=swap" rel="stylesheet">
@@ -13,117 +13,240 @@
   <div class="bg-grid" aria-hidden="true"></div>
 
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="PM.cinema">
+    <button class="brand brand-button" type="button" onclick="openPage('home')" aria-label="PM.cinema">
       PM<span>.cinema</span>
-    </a>
+    </button>
     <nav class="nav">
-      <a href="#watch">Дивитись</a>
-      <a href="#about">Опис</a>
-      <a href="#details">Деталі</a>
+      <button type="button" onclick="openPage('home')">Фільми</button>
     </nav>
   </header>
 
   <main id="top">
-    <section class="hero">
-      <div class="hero-backdrop" aria-hidden="true"></div>
-      <div class="hero-inner">
-        <aside class="poster glass reveal">
-          <img src="reklama.jpg" alt="Постер фільму Песик Джонні та його молодіжні бешкетники">
-        </aside>
-
-        <div class="hero-copy reveal delay-1">
-          <span class="badge">Анімація • пригоди • комедія</span>
-          <h1>Песик Джонні та його молодіжні бешкетники</h1>
+    <section class="page-view" id="home-page">
+      <div class="home-hero">
+        <div class="home-hero-bg" aria-hidden="true"></div>
+        <div class="home-hero-inner reveal">
+          <span class="badge">Каталог перегляду</span>
+          <h1>PM.cinema</h1>
           <p class="lead">
-            Джонні вривається у літо з друзями, скейтом, фарбами та планом, який
-            точно мав бути простим. Але коли навколо збирається команда юних
-            бешкетників, кожен день перетворюється на нову пригоду.
+            Фільми, трейлери та сторінки перегляду в одному місці. Обирай картку,
+            відкривай сторінку фільму та переходь до плеєра без зайвих кроків.
           </p>
-
-          <div class="facts">
-            <span>2026</span>
-            <span>Україна</span>
-            <span>6+</span>
-            <span>Очікується</span>
-          </div>
-
-          <a class="primary-btn" href="#watch">
-            <span class="play-icon"></span>
-            Перейти до плеєра
-          </a>
         </div>
       </div>
-    </section>
 
-    <section class="watch-section" id="watch">
-      <div class="section-head reveal">
-        <span class="badge">Онлайн перегляд</span>
-        <h2>Плеєр</h2>
-      </div>
+      <section class="catalog-section">
+        <div class="section-head reveal">
+          <span class="badge">Доступно зараз</span>
+          <h2>Фільми</h2>
+        </div>
 
-      <div class="player-shell glass reveal delay-1">
-        <div class="player-screen">
-          <button class="player-start" type="button" id="playerBtn" aria-label="Запустити плеєр">
-            <span class="player-play"></span>
+        <div class="movie-grid">
+          <button class="movie-card glass reveal delay-1" type="button" onclick="openPage('movie-johnny')" aria-label="Відкрити сторінку фільму Песик Джонні">
+            <div class="movie-poster">
+              <img src="reklama.jpg" alt="Песик Джонні та його молодіжні бешкетники">
+              <span>Скоро</span>
+            </div>
+            <div class="movie-info">
+              <h3>Песик Джонні та його молодіжні бешкетники</h3>
+              <p>Анімаційна пригода про дружбу, бешкети та літо, яке неможливо забути.</p>
+              <div class="movie-meta">
+                <span>2026</span>
+                <span>6+</span>
+                <span>Україна</span>
+              </div>
+            </div>
           </button>
-          <div class="player-empty">
-            <strong>Відео ще не підключено</strong>
-            <span>Після додавання джерела фільм відкриватиметься у цьому плеєрі.</span>
+
+          <button class="movie-card glass reveal delay-2" type="button" onclick="openPage('movie-chaos')" aria-label="Відкрити сторінку фільму Дерев'яне розчарування">
+            <div class="movie-poster">
+              <img src="reklama2.jpg" alt="Дерев'яне розчарування">
+              <span>Горор</span>
+            </div>
+            <div class="movie-info">
+              <h3>Дерев'яне розчарування</h3>
+              <p>Темний горор про старий дім, дивні маски та хлопчика, якого шукають не для порятунку.</p>
+              <div class="movie-meta">
+                <span>2026</span>
+                <span>16+</span>
+                <span>Україна</span>
+              </div>
+            </div>
+          </button>
+        </div>
+      </section>
+
+      <section class="about-strip glass reveal">
+        <span class="badge">PM.cinema</span>
+        <h2>Кіно без зайвого шуму</h2>
+        <p>
+          Кожен фільм має власний екран з постером, описом, деталями та місцем під
+          плеєр. Коли з'явиться відео, його можна буде підключити прямо в цьому файлі.
+        </p>
+      </section>
+    </section>
+
+    <section class="page-view hidden" id="movie-johnny-page">
+      <section class="hero">
+        <div class="hero-backdrop hero-backdrop-johnny" aria-hidden="true"></div>
+        <div class="hero-inner">
+          <aside class="poster glass reveal">
+            <img src="reklama.jpg" alt="Постер фільму Песик Джонні та його молодіжні бешкетники">
+          </aside>
+
+          <div class="hero-copy reveal delay-1">
+            <span class="badge">Анімація • пригоди • комедія</span>
+            <h1>Песик Джонні та його молодіжні бешкетники</h1>
+            <p class="lead">
+              Джонні вривається у літо з друзями, скейтом, фарбами та планом, який
+              точно мав бути простим. Але коли навколо збирається команда юних
+              бешкетників, кожен день перетворюється на нову пригоду.
+            </p>
+
+            <div class="facts">
+              <span>2026</span>
+              <span>Україна</span>
+              <span>6+</span>
+              <span>Очікується</span>
+            </div>
+
+            <a class="primary-btn" href="#watch-johnny">
+              <span class="play-icon"></span>
+              Перейти до плеєра
+            </a>
           </div>
         </div>
-        <div class="player-bar">
-          <span></span>
-          <span></span>
-          <span></span>
+      </section>
+
+      <section class="watch-section movie-watch" id="watch-johnny">
+        <div class="section-head reveal">
+          <span class="badge">Онлайн перегляд</span>
+          <h2>Плеєр</h2>
         </div>
-      </div>
+        <div class="player-shell glass reveal delay-1">
+          <div class="player-screen">
+            <button class="player-start" type="button" aria-label="Запустити плеєр"><span class="player-play"></span></button>
+            <div class="player-empty">
+              <strong>Відео ще не підключено</strong>
+              <span>Після додавання джерела фільм відкриватиметься у цьому плеєрі.</span>
+            </div>
+          </div>
+          <div class="player-bar"><span></span><span></span><span></span></div>
+        </div>
+      </section>
+
+      <section class="content-grid movie-about" id="about-johnny">
+        <article class="description glass reveal">
+          <span class="badge">Про фільм</span>
+          <h2>Опис</h2>
+          <p>
+            Джонні не створений для нудних канікул. Він бачить пригоду там, де інші
+            бачать звичайний день, і легко збирає навколо себе друзів, готових на
+            найсміливіші витівки.
+          </p>
+          <p>
+            Це яскрава сімейна історія про дружбу, характер і той момент, коли навіть
+            маленький песик може стати центром великої пригоди.
+          </p>
+        </article>
+
+        <aside class="info-panel glass reveal delay-1" id="details-johnny">
+          <h3>Інформація</h3>
+          <dl>
+            <div><dt>Назва</dt><dd>Песик Джонні та його молодіжні бешкетники</dd></div>
+            <div><dt>Жанр</dt><dd>анімація, пригоди, комедія</dd></div>
+            <div><dt>Рік</dt><dd>2026</dd></div>
+            <div><dt>Країна</dt><dd>Україна</dd></div>
+            <div><dt>Мова</dt><dd>українська</dd></div>
+            <div><dt>Статус</dt><dd>очікується реліз</dd></div>
+          </dl>
+        </aside>
+      </section>
     </section>
 
-    <section class="content-grid" id="about">
-      <article class="description glass reveal">
-        <span class="badge">Про фільм</span>
-        <h2>Опис</h2>
-        <p>
-          Джонні не створений для нудних канікул. Він бачить пригоду там, де інші
-          бачать звичайний день, і легко збирає навколо себе друзів, готових на
-          найсміливіші витівки. Разом вони запускають ланцюг подій, у якому буде
-          багато сміху, хаосу, несподіваних рішень і справжньої командної підтримки.
-        </p>
-        <p>
-          Це яскрава сімейна історія про дружбу, характер і той момент, коли навіть
-          маленький песик може стати центром великої пригоди.
-        </p>
-      </article>
+    <section class="page-view hidden" id="movie-chaos-page">
+      <section class="hero">
+        <div class="hero-backdrop hero-backdrop-chaos" aria-hidden="true"></div>
+        <div class="hero-inner">
+          <aside class="poster glass reveal">
+            <img src="reklama2.jpg" alt="Постер фільму Дерев'яне розчарування">
+          </aside>
 
-      <aside class="info-panel glass reveal delay-1" id="details">
-        <h3>Інформація</h3>
-        <dl>
-          <div><dt>Оригінальна назва</dt><dd>Песик Джонні та його молодіжні бешкетники</dd></div>
-          <div><dt>Жанр</dt><dd>анімація, пригоди, комедія</dd></div>
-          <div><dt>Рік</dt><dd>2026</dd></div>
-          <div><dt>Країна</dt><dd>Україна</dd></div>
-          <div><dt>Мова</dt><dd>українська</dd></div>
-          <div><dt>Статус</dt><dd>очікується реліз</dd></div>
-        </dl>
-      </aside>
-    </section>
+          <div class="hero-copy reveal delay-1">
+            <span class="badge">Горор • трилер • містика</span>
+            <h1>Дерев'яне розчарування</h1>
+            <p class="lead">
+              У старому будинку серед лісу двоє дорослих у моторошних масках
+              шукають хлопчика, який ховається від їхньої "турботи". Для них це
+              полювання, для нього - шанс пережити ніч і не видати себе.
+            </p>
 
-    <section class="mood-section">
-      <div class="section-head reveal">
-        <span class="badge">Настрій</span>
-        <h2>Що чекати</h2>
-      </div>
-      <div class="mood-grid">
-        <div class="mood-card glass reveal">Швидкий темп</div>
-        <div class="mood-card glass reveal delay-1">Дружба</div>
-        <div class="mood-card glass reveal delay-2">Веселий хаос</div>
-      </div>
+            <div class="facts">
+              <span>2026</span>
+              <span>Україна</span>
+              <span>16+</span>
+              <span>03.07.26</span>
+            </div>
+
+            <a class="primary-btn" href="#watch-chaos">
+              <span class="play-icon"></span>
+              Перейти до плеєра
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="watch-section movie-watch" id="watch-chaos">
+        <div class="section-head reveal">
+          <span class="badge">Онлайн перегляд</span>
+          <h2>Плеєр</h2>
+        </div>
+        <div class="player-shell glass reveal delay-1">
+          <div class="player-screen">
+            <button class="player-start" type="button" aria-label="Запустити плеєр"><span class="player-play"></span></button>
+            <div class="player-empty">
+              <strong>Відео ще не підключено</strong>
+              <span>Після додавання джерела фільм відкриватиметься у цьому плеєрі.</span>
+            </div>
+          </div>
+          <div class="player-bar"><span></span><span></span><span></span></div>
+        </div>
+      </section>
+
+      <section class="content-grid movie-about" id="about-chaos">
+        <article class="description glass reveal">
+          <span class="badge">Про фільм</span>
+          <h2>Опис</h2>
+          <p>
+            "Дерев'яне розчарування" - це історія про дитячий страх, який отримав
+            реальні обличчя. У покинутому домі кожен скрип дошки може видати схованку,
+            а кожне вікно здається чиїмось поглядом з темряви.
+          </p>
+          <p>
+            Фільм тримає напругу на простому питанні: хто переможе цієї ночі -
+            полювання чи воля. Атмосфера старого дерева, темних кімнат і батьківської
+            одержимості працює як пастка, з якої треба вибратися до світанку.
+          </p>
+        </article>
+
+        <aside class="info-panel glass reveal delay-1" id="details-chaos">
+          <h3>Інформація</h3>
+          <dl>
+            <div><dt>Назва</dt><dd>Дерев'яне розчарування</dd></div>
+            <div><dt>Жанр</dt><dd>горор, трилер, містика</dd></div>
+            <div><dt>Рік</dt><dd>2026</dd></div>
+            <div><dt>Країна</dt><dd>Україна</dd></div>
+            <div><dt>Мова</dt><dd>українська</dd></div>
+            <div><dt>Прем'єра</dt><dd>03.07.26</dd></div>
+          </dl>
+        </aside>
+      </section>
     </section>
   </main>
 
   <footer class="footer">
     <span>PM.cinema</span>
-    <span>Фільми, прем'єри та перегляд без зайвого шуму.</span>
+    <span>Каталог фільмів і сторінок перегляду.</span>
   </footer>
 
   <script src="script.js"></script>
