@@ -60,7 +60,7 @@
 
           <button class="movie-card glass reveal delay-2" type="button" onclick="openPage('movie-chaos')" aria-label="Відкрити сторінку фільму Дерев'яне розчарування">
             <div class="movie-poster">
-              <img src="reklama2.jpg" alt="Дерев'яне розчарування">
+              <img src="reklama2.jpg?v=2" alt="Дерев'яне розчарування">
               <span>Горор</span>
             </div>
             <div class="movie-info">
@@ -169,7 +169,7 @@
         <div class="hero-backdrop hero-backdrop-chaos" aria-hidden="true"></div>
         <div class="hero-inner">
           <aside class="poster glass reveal">
-            <img src="reklama2.jpg" alt="Постер фільму Дерев'яне розчарування">
+            <img src="reklama2.jpg?v=2" alt="Постер фільму Дерев'яне розчарування">
           </aside>
 
           <div class="hero-copy reveal delay-1">
@@ -202,14 +202,33 @@
           <h2>Плеєр</h2>
         </div>
         <div class="player-shell glass reveal delay-1">
-          <div class="player-screen">
-            <button class="player-start" type="button" aria-label="Запустити плеєр"><span class="player-play"></span></button>
-            <div class="player-empty">
-              <strong>Відео ще не підключено</strong>
-              <span>Після додавання джерела фільм відкриватиметься у цьому плеєрі.</span>
+          <div class="player-screen video-ready">
+            <div class="custom-player" data-player>
+              <video class="movie-video" preload="metadata" poster="reklama2.jpg?v=2" playsinline>
+                <source src="fil2.mp4" type="video/mp4">
+              </video>
+              <button class="player-overlay-btn" type="button" data-play aria-label="Відтворити">
+                <span class="player-play"></span>
+              </button>
+              <div class="custom-controls">
+                <div class="progress-wrap">
+                  <input class="video-progress" data-progress type="range" min="0" max="100" value="0" step="0.1" aria-label="Прогрес відео">
+                </div>
+                <div class="control-row">
+                  <button class="control-btn" type="button" data-play aria-label="Пауза або відтворення">
+                    <span class="control-play-icon"></span>
+                  </button>
+                  <span class="time-label" data-time>0:00 / 0:00</span>
+                  <button class="control-btn" type="button" data-mute aria-label="Звук">
+                    <span class="sound-icon"></span>
+                  </button>
+                  <button class="control-btn" type="button" data-fullscreen aria-label="На весь екран">
+                    <span class="fullscreen-icon"></span>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="player-bar"><span></span><span></span><span></span></div>
         </div>
       </section>
 
