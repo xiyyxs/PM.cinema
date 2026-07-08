@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=5">
+  <link rel="stylesheet" href="styles.css?v=8">
 </head>
 <body>
   <div class="bg-grid" aria-hidden="true"></div>
@@ -69,6 +69,22 @@
               <div class="movie-meta">
                 <span>2026</span>
                 <span>16+</span>
+                <span>Україна</span>
+              </div>
+            </div>
+          </button>
+
+          <button class="movie-card glass reveal delay-2" type="button" onclick="openPage('movie-wood2')" aria-label="Відкрити сторінку фільму Дерев'яне розчарування 2">
+            <div class="movie-poster">
+              <img src="reklama3.jpg?v=1" alt="Дерев'яне розчарування 2">
+              <span>18+</span>
+            </div>
+            <div class="movie-info">
+              <h3>Дерев'яне розчарування 2</h3>
+              <p>Новий розділ темної історії про дім, який не відпускає тих, хто зайшов усередину.</p>
+              <div class="movie-meta">
+                <span>2026</span>
+                <span>18+</span>
                 <span>Україна</span>
               </div>
             </div>
@@ -280,6 +296,103 @@
         </aside>
       </section>
     </section>
+
+    <section class="page-view hidden" id="movie-wood2-page">
+      <section class="hero">
+        <div class="hero-backdrop hero-backdrop-wood2" aria-hidden="true"></div>
+        <div class="hero-inner">
+          <aside class="poster glass reveal">
+            <img src="reklama3.jpg?v=1" alt="Постер фільму Дерев'яне розчарування 2">
+          </aside>
+
+          <div class="hero-copy reveal delay-1">
+            <span class="badge">Горор • містика • трилер</span>
+            <h1>Дерев'яне розчарування 2</h1>
+            <p class="lead">
+              Дім відкриває новий лабіринт, де кожен коридор веде глибше у страх.
+              Старі таємниці повертаються, а дерев'яні обличчя вже чекають на того,
+              хто спробує знайти вихід.
+            </p>
+
+            <div class="facts">
+              <span>2026</span>
+              <span>Україна</span>
+              <span>18+</span>
+              <span>Відео пізніше</span>
+            </div>
+
+            <a class="primary-btn" href="#watch-wood2">
+              <span class="play-icon"></span>
+              Перейти до плеєра
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="watch-section movie-watch" id="watch-wood2">
+        <div class="section-head reveal">
+          <span class="badge">Онлайн перегляд</span>
+          <h2>Плеєр</h2>
+        </div>
+        <div class="player-shell glass reveal delay-1">
+          <div class="player-screen video-ready">
+            <div class="custom-player" data-player>
+              <video class="movie-video" preload="metadata" poster="reklama3.jpg?v=2" playsinline>
+                <source src="fil3.mp4?v=2" type="video/mp4">
+              </video>
+              <button class="player-overlay-btn" type="button" data-play aria-label="Відтворити">
+                <span class="player-play"></span>
+              </button>
+              <div class="custom-controls">
+                <div class="progress-wrap">
+                  <input class="video-progress" data-progress type="range" min="0" max="100" value="0" step="0.1" aria-label="Прогрес відео">
+                </div>
+                <div class="control-row">
+                  <button class="control-btn" type="button" data-play aria-label="Пауза або відтворення">
+                    <span class="control-play-icon"></span>
+                  </button>
+                  <span class="time-label" data-time>0:00 / 0:00</span>
+                  <button class="control-btn" type="button" data-mute aria-label="Звук">
+                    <span class="sound-icon"></span>
+                  </button>
+                  <button class="control-btn" type="button" data-fullscreen aria-label="На весь екран">
+                    <span class="fullscreen-icon"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-grid movie-about" id="about-wood2">
+        <article class="description glass reveal">
+          <span class="badge">Про фільм</span>
+          <h2>Опис</h2>
+          <p>
+            Продовження веде історію у ще темніше місце: будинок більше не просто
+            лякає, він випробовує кожного, хто опинився поруч. Тиша, дерев'яний
+            скрип і чужі голоси стають частиною пастки.
+          </p>
+          <p>
+            Це похмурий горор про страх, який залишився після першої ночі, і про
+            таємниці, що не хочуть бути знайденими.
+          </p>
+        </article>
+
+        <aside class="info-panel glass reveal delay-1" id="details-wood2">
+          <h3>Інформація</h3>
+          <dl>
+            <div><dt>Назва</dt><dd>Дерев'яне розчарування 2</dd></div>
+            <div><dt>Жанр</dt><dd>горор, містика, трилер</dd></div>
+            <div><dt>Рік</dt><dd>2026</dd></div>
+            <div><dt>Країна</dt><dd>Україна</dd></div>
+            <div><dt>Мова</dt><dd>українська</dd></div>
+            <div><dt>Статус</dt><dd>відео буде додано пізніше</dd></div>
+          </dl>
+        </aside>
+      </section>
+    </section>
   </main>
 
   <footer class="footer">
@@ -287,6 +400,6 @@
     <span>Каталог фільмів і сторінок перегляду.</span>
   </footer>
 
-  <script src="script.js?v=5"></script>
+  <script src="script.js?v=8"></script>
 </body>
 </html>

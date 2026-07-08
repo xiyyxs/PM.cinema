@@ -1,11 +1,22 @@
 let currentPage = 'home';
+const pages = new Set(['home', 'movie-johnny', 'movie-chaos', 'movie-wood2']);
 
-function openPage(page, scrollTop = true) {
+function openPage(page, scrollTop = true, updateHash = true) {
+  if (!pages.has(page)) page = 'home';
   currentPage = page;
   document.querySelectorAll('.page-view').forEach((section) => {
     section.classList.toggle('hidden', section.id !== `${page}-page`);
   });
+  if (updateHash) {
+    const hash = page === 'home' ? '' : `#${page}`;
+    history.pushState(null, '', `${location.pathname}${hash}`);
+  }
   if (scrollTop) window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function openPageFromHash() {
+  const page = location.hash.replace('#', '') || 'home';
+  openPage(page, false, false);
 }
 
 function formatTime(value) {
@@ -87,6 +98,8 @@ function initCustomPlayer(player) {
 }
 
 document.querySelectorAll('[data-player]').forEach(initCustomPlayer);
+openPageFromHash();
+window.addEventListener('hashchange', openPageFromHash);
 
 document.addEventListener('click', (event) => {
   const button = event.target.closest('.player-start');
